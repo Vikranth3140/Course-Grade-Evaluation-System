@@ -1,0 +1,3 @@
+Course	Credits	Weights					Cutoffs for different grades					Grading Summary
+
+IP		4		labs: 30%	midsem: 15%	assignments: 30%	endsem: 25%				80	64.675	50	41.0				{'A': 3, 'B': 7, 'C': 2, 'D': 1, 'F': 7}

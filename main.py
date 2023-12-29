@@ -1,6 +1,9 @@
 import time
 import logging
 
+# Configure logging
+logging.basicConfig(filename='grad_eval.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s: %(message)s')
+
 class GradeCalculator:
     def __init__(self, file_path):
         self.file_path = file_path
@@ -10,6 +13,7 @@ class GradeCalculator:
         self.percentages = {}
 
     def read_students_data(self):
+        logging.info(f"Reading data from file: {self.file_path}")
         try:
             with open(self.file_path, 'r') as file:
                 for line in file:
@@ -18,18 +22,23 @@ class GradeCalculator:
                     marks = list(map(int, data[1:]))
                     self.students_data[roll_no] = marks
         except FileNotFoundError as e:
-            raise FileNotFoundError(f"Error: File '{self.file_path}' not found.") from e
+            logging.error(f"Error: File '{self.file_path}' not found.")
+            raise e
         except Exception as e:
-            raise Exception(f"An unexpected error occurred while reading data: {e}") from e
+            logging.error(f"An unexpected error occurred while reading data: {e}")
+            raise e
 
     def calculate_percentages(self):
+        logging.info("Calculating percentages.")
         percentages = {}
         for roll_no, marks in self.students_data.items():
             weighted_sum = sum(mark * weight[1] / 100 for mark, weight in zip(marks, self.weights))
             percentages[roll_no] = round(weighted_sum, 2)
+        self.percentages = percentages
         return percentages
 
     def calculate_grades(self, percentages):
+        logging.info("Calculating grades.")
         grades = {}
         for roll_no, percentage in percentages.items():
             grade = self.get_grade(percentage)
@@ -49,6 +58,7 @@ class GradeCalculator:
             return 'F'
 
     def update_policy(self):
+        logging.info("Updating policy.")
         for i in range(len(self.policy)):
             temp_list = [j for j in self.percentages.values() if abs(self.policy[i] - j) <= 2]
             if temp_list:
@@ -66,6 +76,7 @@ class Student:
         self.dict_count = {}
 
     def calculate_statistics(self):
+        logging.info("Calculating statistics.")
         self.calculator.read_students_data()
         self.percentages = self.calculator.calculate_percentages()
         self.calculator.update_policy()
@@ -73,31 +84,50 @@ class Student:
         self.calculate_grade_counts()
 
     def calculate_grade_counts(self):
+        logging.info("Calculating grade counts.")
         grade_counts = {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'F': 0}
         for grade in self.grades.values():
             grade_counts[grade] += 1
         self.dict_count = grade_counts
 
     def display_course_summary(self):
-        print('Course Name:', course_name)
-        print('Credits:', credits)
-        print('Weights:', self.calculator.weights)
-        print('Cutoffs for different grades:', self.calculator.policy)
-        print('Grading Summary:', self.dict_count)
+        logging.info("Displaying course summary.")
+        print("Course Summary shown in 'Course Summary' text file.")
+        with open("Course Summary", "w") as f:
+            f.write("Course\tCredits\tWeights\t\t\t\t\tCutoffs for different grades\t\t\t\t\tGrading Summary\n\n")
+            f.write(f"{course_name}\t\t{credits}\t\t")
+            
+            # Display weights
+            weights_str = ""
+            for weight in self.calculator.weights:
+                weights_str += f"{weight[0]}: {weight[1]}%\t"
+            f.write(weights_str + "\t\t\t")
+            
+            # Display cutoffs
+            cutoffs_str = ""
+            for cutoff in self.calculator.policy:
+                cutoffs_str += f"{cutoff}\t"
+            f.write(cutoffs_str + "\t\t\t")
+            
+            f.write(f"{self.dict_count}\n")
 
     def show_grades(self):
+        logging.info("Showing grades.")
+        print("Students Grade Summary shown in 'Student's Grade Summary' text file.")
         with open("Student's Grade Summary", "w") as f:
             f.write("Student ID\t\t\tTotal Marks\t\t\tGrade\n\n")
             for roll_no, grade in self.grades.items():
                 f.write(f"{roll_no}\t\t\t\t{self.percentages[roll_no]}\t\t\t\t{grade}\n")
 
     def search_student_record(self, roll_no):
+        logging.info(f"Searching for student with Roll No.: {roll_no}")
         if roll_no in self.calculator.students_data:
             print(f'The Marks: {self.calculator.students_data[roll_no]}')
             print(f'The Grade: {self.grades[roll_no]}')
             print(f'The Percentage: {self.percentages[roll_no]}')
         else:
             print('Student with that Roll No not found')
+            logging.warning(f"Student with Roll No. {roll_no} not found.")
 
 if __name__ == "__main__":
     # Input from user
