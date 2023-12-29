@@ -67,7 +67,7 @@ class Student:
 
     def calculate_statistics(self):
         self.calculator.read_students_data()
-        self.percentages = self.calculator.calculate_percentages()  # Moved this line
+        self.percentages = self.calculator.calculate_percentages()
         self.calculator.update_policy()
         self.grades = self.calculator.calculate_grades(self.percentages)
         self.calculate_grade_counts()
@@ -87,8 +87,9 @@ class Student:
 
     def show_grades(self):
         with open("Student's Grade Summary", "w") as f:
+            f.write("Student ID\t\t\tTotal Marks\t\t\tGrade\n\n")
             for roll_no, grade in self.grades.items():
-                f.write(f"{roll_no}, {self.percentages[roll_no]}, {grade}\n")
+                f.write(f"{roll_no}\t\t\t\t{self.percentages[roll_no]}\t\t\t\t{grade}\n")
 
     def search_student_record(self, roll_no):
         if roll_no in self.calculator.students_data:
