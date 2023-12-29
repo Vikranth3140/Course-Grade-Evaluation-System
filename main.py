@@ -92,9 +92,9 @@ class Student:
 
     def display_course_summary(self):
         logging.info("Displaying course summary.")
-        print("Course Summary shown in 'Course Summary' text file.")
+        file_path = "Course Summary"
 
-        headers = ["Course", "Credits", "Component", "Cutoff", "Grade Count"]
+        headers = ["Course", "Credits", "Component", "Weightage", "Cutoffs", "Grading Summary"]
         data = []
 
         for i in range(len(self.calculator.weights)):
@@ -102,10 +102,20 @@ class Student:
             cutoff = self.calculator.policy[i]
             grade = chr(ord('A') + i)
             grade_count = self.dict_count[grade]
+            data.append([course_name, credits, weight_name, f"{weight_value}%", cutoff, f"{grade} = {grade_count}"])
 
-            data.append([course_name, credits, weight_name, f"{weight_value}%", f"{grade} = {cutoff} ({grade_count})"])
+        f_grade_count = self.dict_count["F"]
+        total_weight = sum(weight for _, weight in self.calculator.weights)
+        total_students = sum(self.dict_count.values())
+        data.append(["", "", "", "", "", f"F = {f_grade_count}"])
+        data.append(["", "", "", "", "", ""])
+        data.append(["Total", "", "", f"{total_weight}%", "", f"{total_students}"])
 
-        print(tabulate(data, headers=headers, tablefmt="grid"))
+        with open(file_path, 'w') as f:
+            f.write(tabulate(data, headers=headers, tablefmt="grid"))
+
+        print(f"Course Summary written to '{file_path}'.")
+        logging.info(f"Course Summary written to '{file_path}'.")
 
     def show_grades(self):
         logging.info("Showing grades.")

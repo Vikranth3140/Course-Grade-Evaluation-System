@@ -106,3 +106,60 @@
 2023-12-30 04:59:08,176 - INFO: Calculating grades.
 2023-12-30 04:59:08,176 - INFO: Calculating grade counts.
 2023-12-30 04:59:09,319 - INFO: Displaying course summary.
+2023-12-30 05:02:42,988 - INFO: Calculating statistics.
+2023-12-30 05:02:42,989 - INFO: Reading data from file: a
+2023-12-30 05:02:42,989 - INFO: Calculating percentages.
+2023-12-30 05:02:42,989 - INFO: Updating policy.
+2023-12-30 05:02:42,989 - INFO: Calculating grades.
+2023-12-30 05:02:42,989 - INFO: Calculating grade counts.
+2023-12-30 05:02:44,493 - INFO: Displaying course summary.
+2023-12-30 05:06:30,277 - INFO: Calculating statistics.
+2023-12-30 05:06:30,277 - INFO: Reading data from file: a
+2023-12-30 05:06:30,277 - INFO: Calculating percentages.
+2023-12-30 05:06:30,277 - INFO: Updating policy.
+2023-12-30 05:06:30,277 - INFO: Calculating grades.
+2023-12-30 05:06:30,277 - INFO: Calculating grade counts.
+2023-12-30 05:06:31,042 - INFO: Displaying course summary.
+2023-12-30 05:07:04,670 - INFO: Calculating statistics.
+2023-12-30 05:07:04,670 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:07:04,679 - INFO: Calculating percentages.
+2023-12-30 05:07:04,679 - INFO: Updating policy.
+2023-12-30 05:07:04,679 - INFO: Calculating grades.
+2023-12-30 05:07:04,679 - INFO: Calculating grade counts.
+2023-12-30 05:07:06,702 - INFO: Displaying course summary.
+2023-12-30 05:09:08,037 - INFO: Calculating statistics.
+2023-12-30 05:09:08,037 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:09:08,038 - INFO: Calculating percentages.
+2023-12-30 05:09:08,038 - INFO: Updating policy.
+2023-12-30 05:09:08,038 - INFO: Calculating grades.
+2023-12-30 05:09:08,038 - INFO: Calculating grade counts.
+2023-12-30 05:09:08,929 - INFO: Displaying course summary.
+2023-12-30 05:10:43,207 - INFO: Calculating statistics.
+2023-12-30 05:10:43,207 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:10:43,208 - INFO: Calculating percentages.
+2023-12-30 05:10:43,208 - INFO: Updating policy.
+2023-12-30 05:10:43,208 - INFO: Calculating grades.
+2023-12-30 05:10:43,208 - INFO: Calculating grade counts.
+2023-12-30 05:10:44,593 - INFO: Displaying course summary.
+2023-12-30 05:13:45,443 - INFO: Calculating statistics.
+2023-12-30 05:13:45,451 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:13:45,451 - INFO: Calculating percentages.
+2023-12-30 05:13:45,451 - INFO: Updating policy.
+2023-12-30 05:13:45,451 - INFO: Calculating grades.
+2023-12-30 05:13:45,451 - INFO: Calculating grade counts.
+2023-12-30 05:13:46,323 - INFO: Displaying course summary.
+2023-12-30 05:14:46,069 - INFO: Calculating statistics.
+2023-12-30 05:14:46,069 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:14:46,070 - INFO: Calculating percentages.
+2023-12-30 05:14:46,070 - INFO: Updating policy.
+2023-12-30 05:14:46,070 - INFO: Calculating grades.
+2023-12-30 05:14:46,070 - INFO: Calculating grade counts.
+2023-12-30 05:14:47,108 - INFO: Displaying course summary.
+2023-12-30 05:16:47,985 - INFO: Calculating statistics.
+2023-12-30 05:16:47,986 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:16:47,986 - INFO: Calculating percentages.
+2023-12-30 05:16:47,986 - INFO: Updating policy.
+2023-12-30 05:16:47,986 - INFO: Calculating grades.
+2023-12-30 05:16:47,986 - INFO: Calculating grade counts.
+2023-12-30 05:16:49,558 - INFO: Displaying course summary.
+2023-12-30 05:16:49,560 - INFO: Course Summary written to 'Course Summary.txt'.
