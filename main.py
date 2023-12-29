@@ -1,4 +1,4 @@
-import time
+from tabulate import tabulate
 import logging
 
 # Configure logging
@@ -93,23 +93,19 @@ class Student:
     def display_course_summary(self):
         logging.info("Displaying course summary.")
         print("Course Summary shown in 'Course Summary' text file.")
-        with open("Course Summary", "w") as f:
-            f.write("Course\tCredits\tWeights\t\t\t\t\tCutoffs for different grades\t\t\t\t\tGrading Summary\n\n")
-            f.write(f"{course_name}\t\t{credits}\t\t")
-            
-            # Display weights
-            weights_str = ""
-            for weight in self.calculator.weights:
-                weights_str += f"{weight[0]}: {weight[1]}%\t"
-            f.write(weights_str + "\t\t\t")
-            
-            # Display cutoffs
-            cutoffs_str = ""
-            for cutoff in self.calculator.policy:
-                cutoffs_str += f"{cutoff}\t"
-            f.write(cutoffs_str + "\t\t\t")
-            
-            f.write(f"{self.dict_count}\n")
+
+        headers = ["Course", "Credits", "Component", "Cutoff", "Grade Count"]
+        data = []
+
+        for i in range(len(self.calculator.weights)):
+            weight_name, weight_value = self.calculator.weights[i]
+            cutoff = self.calculator.policy[i]
+            grade = chr(ord('A') + i)
+            grade_count = self.dict_count[grade]
+
+            data.append([course_name, credits, weight_name, f"{weight_value}%", f"{grade} = {cutoff} ({grade_count})"])
+
+        print(tabulate(data, headers=headers, tablefmt="grid"))
 
     def show_grades(self):
         logging.info("Showing grades.")
