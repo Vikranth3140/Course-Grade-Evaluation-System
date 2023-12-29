@@ -1,61 +1,57 @@
-l2 = []
-wts = [(10, 5), (20, 5), (100, 15), (40, 10), (100, 35), (100, 30)]
+class Student:
+    def __init__(self, student_id, marks):
+        self.student_id = student_id
+        self.marks = marks
 
-f = open("IPmarks.txt",'r')
-contents = f.readlines()
-f.close()
+class GradeCalculator:
+    def __init__(self, weights):
+        self.weights = weights
 
-def calc_grade(sum):
-    grd = ''
-    if sum > 80:
-        grd = 'A'
-    elif 80 >= sum > 70:
-        grd = 'A-'
-    elif 70 >= sum > 60:
-        grd = 'B'
-    elif 60 >= sum > 50:
-        grd = 'B-'
-    elif 50 >= sum > 40:
-        grd = 'C'
-    elif 40 >= sum > 35:
-        grd = 'C-'
-    elif 35 >= sum > 30:
-        grd = 'D'
-    else:
-        grd = 'F'
-    return grd
+    def calculate_weighted_sum(self, student):
+        weighted_sum = sum(mark * weight[1] / weight[0] for mark, weight in zip(student.marks, self.weights))
+        return weighted_sum
 
-line = []
-for i in contents:
-    k = i.strip()
-    line.append(k)
+    def calculate_grade(self, total_marks):
+        if total_marks > 80:
+            return 'A'
+        elif 80 >= total_marks > 70:
+            return 'A-'
+        elif 70 >= total_marks > 60:
+            return 'B'
+        elif 60 >= total_marks > 50:
+            return 'B-'
+        elif 50 >= total_marks > 40:
+            return 'C'
+        elif 40 >= total_marks > 35:
+            return 'C-'
+        elif 35 >= total_marks > 30:
+            return 'D'
+        else:
+            return 'F'
 
-line2 = []
-for i in line:
-    line = i.split(',')
-    line2.append(line)
+def read_student_data(file_path):
+    students = []
+    with open(file_path, 'r') as file:
+        for line in file:
+            data = line.strip().split(',')
+            student_id = int(data[0])
+            marks = list(map(int, data[1:]))
+            students.append(Student(student_id, marks))
+    return students
 
-for i in line2:
-    l1 = []
-    for j in range(1,len(i)):
-        l1.append(int(i[j]))
-    l2.append(l1)
+def write_grade_data(students, grade_calculator, output_file_path):
+    with open(output_file_path, 'w') as file:
+        for student in students:
+            weighted_sum = grade_calculator.calculate_weighted_sum(student)
+            total_marks = round(weighted_sum, 2)
+            grade = grade_calculator.calculate_grade(total_marks)
+            file.write(f"{student.student_id},{total_marks},{grade}\n")
 
-p2 = []
-for i in range(len(l2)):
-    p1 = []
-    sum1 = 0
-    for j in range(len(l2[i])):
-        sum1 += l2[i][j] * wts[j][1]/wts[j][0]
-    p1.append(sum1)
-    p2.append(p1)
+def main():
+    weights = [(10, 5), (20, 5), (100, 15), (40, 10), (100, 35), (100, 30)]
+    students = read_student_data("IPmarks.txt")
+    grade_calculator = GradeCalculator(weights)
+    write_grade_data(students, grade_calculator, "IPgrade.txt")
 
-s1 = []
-for i in p2:
-    s = sum(i)
-    s1.append(s)
-
-f = open('IPgrade.txt','w')
-
-for i in range(len(l2)):
-    f.write(line2[i][0] + ',' + str(s1[i]) + ',' + calc_grade(s1[i]) + '\n')
+if __name__ == "__main__":
+    main()
