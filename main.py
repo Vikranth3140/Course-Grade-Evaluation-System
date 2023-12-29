@@ -50,10 +50,10 @@ class GradeProcessor:
                     student_id = int(data[0])
                     marks = list(map(int, data[1:]))
                     self.students.append(self.Student(student_id, marks))
-        except FileNotFoundError:
-            print(f"Error: File '{self.input_file_path}' not found.")
+        except FileNotFoundError as e:
+            raise FileNotFoundError(f"Error: File '{self.input_file_path}' not found.") from e
         except Exception as e:
-            print(f"An unexpected error occurred while reading data: {e}")
+            raise Exception(f"An unexpected error occurred while reading data: {e}") from e
 
     def write_grade_data(self):
         try:
