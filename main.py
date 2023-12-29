@@ -31,27 +31,38 @@ class GradeCalculator:
 
 def read_student_data(file_path):
     students = []
-    with open(file_path, 'r') as file:
-        for line in file:
-            data = line.strip().split(',')
-            student_id = int(data[0])
-            marks = list(map(int, data[1:]))
-            students.append(Student(student_id, marks))
+    try:
+        with open(file_path, 'r') as file:
+            for line in file:
+                data = line.strip().split(',')
+                student_id = int(data[0])
+                marks = list(map(int, data[1:]))
+                students.append(Student(student_id, marks))
+    except FileNotFoundError:
+        print(f"Error: File '{file_path}' not found.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
     return students
 
 def write_grade_data(students, grade_calculator, output_file_path):
-    with open(output_file_path, 'w') as file:
-        for student in students:
-            weighted_sum = grade_calculator.calculate_weighted_sum(student)
-            total_marks = round(weighted_sum, 2)
-            grade = grade_calculator.calculate_grade(total_marks)
-            file.write(f"{student.student_id},{total_marks},{grade}\n")
+    try:
+        with open(output_file_path, 'w') as file:
+            for student in students:
+                weighted_sum = grade_calculator.calculate_weighted_sum(student)
+                total_marks = round(weighted_sum, 2)
+                grade = grade_calculator.calculate_grade(total_marks)
+                file.write(f"{student.student_id},{total_marks},{grade}\n")
+    except Exception as e:
+        print(f"An unexpected error occurred while writing data: {e}")
 
 def main():
-    weights = [(10, 5), (20, 5), (100, 15), (40, 10), (100, 35), (100, 30)]
-    students = read_student_data("IPmarks.txt")
-    grade_calculator = GradeCalculator(weights)
-    write_grade_data(students, grade_calculator, "IPgrade.txt")
+    try:
+        weights = [(10, 5), (20, 5), (100, 15), (40, 10), (100, 35), (100, 30)]
+        students = read_student_data("IPmarks.txt")
+        grade_calculator = GradeCalculator(weights)
+        write_grade_data(students, grade_calculator, "IPgrade.txt")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
 if __name__ == "__main__":
     main()
