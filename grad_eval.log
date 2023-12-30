@@ -163,3 +163,61 @@
 2023-12-30 05:16:47,986 - INFO: Calculating grade counts.
 2023-12-30 05:16:49,558 - INFO: Displaying course summary.
 2023-12-30 05:16:49,560 - INFO: Course Summary written to 'Course Summary.txt'.
+2023-12-30 05:17:24,489 - INFO: Calculating statistics.
+2023-12-30 05:17:24,490 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:17:24,490 - INFO: Calculating percentages.
+2023-12-30 05:17:24,490 - INFO: Updating policy.
+2023-12-30 05:17:24,490 - INFO: Calculating grades.
+2023-12-30 05:17:24,490 - INFO: Calculating grade counts.
+2023-12-30 05:17:26,141 - INFO: Displaying course summary.
+2023-12-30 05:17:26,143 - INFO: Course Summary written to 'Course Summary'.
+2023-12-30 05:17:34,168 - INFO: Showing grades.
+2023-12-30 05:18:15,254 - INFO: Searching for student with Roll No.: 2022005
+2023-12-30 05:19:12,717 - INFO: Searching for student with Roll No.: 222
+2023-12-30 05:19:12,717 - WARNING: Student with Roll No. 222 not found.
+2023-12-30 05:21:08,488 - INFO: Calculating statistics.
+2023-12-30 05:21:08,488 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:21:08,489 - INFO: Calculating percentages.
+2023-12-30 05:21:08,489 - INFO: Updating policy.
+2023-12-30 05:21:08,489 - INFO: Calculating grades.
+2023-12-30 05:21:08,489 - INFO: Calculating grade counts.
+2023-12-30 05:21:10,855 - INFO: Showing grades.
+2023-12-30 05:23:12,920 - INFO: Calculating statistics.
+2023-12-30 05:23:12,920 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:23:12,920 - INFO: Calculating percentages.
+2023-12-30 05:23:12,920 - INFO: Updating policy.
+2023-12-30 05:23:12,920 - INFO: Calculating grades.
+2023-12-30 05:23:12,920 - INFO: Calculating grade counts.
+2023-12-30 05:23:14,365 - INFO: Displaying course summary.
+2023-12-30 05:24:57,097 - INFO: Calculating statistics.
+2023-12-30 05:24:57,097 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:24:57,097 - INFO: Calculating percentages.
+2023-12-30 05:24:57,097 - INFO: Updating policy.
+2023-12-30 05:24:57,097 - INFO: Calculating grades.
+2023-12-30 05:24:57,097 - INFO: Calculating grade counts.
+2023-12-30 05:24:59,405 - INFO: Displaying course summary.
+2023-12-30 05:25:08,342 - INFO: Showing grades.
+2023-12-30 05:25:22,997 - INFO: Searching for student with Roll No.: 2022001
+2023-12-30 05:29:04,936 - INFO: Calculating statistics.
+2023-12-30 05:29:04,937 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:29:04,937 - INFO: Calculating percentages.
+2023-12-30 05:29:04,937 - INFO: Updating policy.
+2023-12-30 05:29:04,937 - INFO: Calculating grades.
+2023-12-30 05:29:04,937 - INFO: Calculating grade counts.
+2023-12-30 05:29:06,117 - INFO: Displaying course summary.
+2023-12-30 05:30:39,336 - INFO: Calculating statistics.
+2023-12-30 05:30:39,336 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:30:39,337 - INFO: Calculating percentages.
+2023-12-30 05:30:39,337 - INFO: Updating policy.
+2023-12-30 05:30:39,337 - INFO: Calculating grades.
+2023-12-30 05:30:39,338 - INFO: Calculating grade counts.
+2023-12-30 05:30:40,294 - INFO: Displaying course summary.
+2023-12-30 05:30:45,611 - INFO: Showing grades.
+2023-12-30 05:30:58,779 - INFO: Searching for student with Roll No.: 2022001
+2023-12-30 05:33:02,091 - INFO: Calculating statistics.
+2023-12-30 05:33:02,091 - INFO: Reading data from file: IPmarks.txt
+2023-12-30 05:33:02,092 - INFO: Calculating percentages.
+2023-12-30 05:33:02,092 - INFO: Updating policy.
+2023-12-30 05:33:02,092 - INFO: Calculating grades.
+2023-12-30 05:33:02,092 - INFO: Calculating grade counts.
+2023-12-30 05:33:10,960 - INFO: Searching for student with Roll No.: 2022001
