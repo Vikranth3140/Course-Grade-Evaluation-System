@@ -106,7 +106,7 @@ class Student:
         logging.info("Grade counts calculated.")
 
     def display_course_summary(self):
-        file_path = "Course Summary"
+        file_path = "Course Summary.txt"
 
         headers = ["Component", "Weightage", "Cutoffs", "Grading Summary"]
         data = []
@@ -163,18 +163,19 @@ class Student:
             component_weights = [f"{weight[1]}%" for weight in self.calculator.weights]
 
             # Display individual marks using tabulate
-            individual_marks = [["Subject", "Marks"]]
+            individual_marks = [["Component", "Marks"]]
             individual_marks.extend(list(zip(component_names, self.calculator.students_data[roll_no])))
 
             # Write details to "Student's Grade Record" file
-            with open("Student's Grade Record.txt", "w") as f:
+            file_path = "Student's Grade Summary.txt"
+            with open(file_path, "w") as f:
                 f.write(f"Student ID: {roll_no}\n\n")
                 f.write(tabulate(individual_marks, headers="firstrow", tablefmt="grid"))
                 f.write(f'\n\nGrade: {self.grades[roll_no]}\n')
                 f.write(f'Percentage: {self.percentages[roll_no]}\n')
                 logging.info(f"Student with Roll No. {roll_no} found.")
                 print()
-                print(f"Student's Grade Record written to '{f.name}'.")
+                print(f"Student's Grade Record written to '{file_path}'.")
                 print()
         else:
             print('Student with that Roll No not found')
@@ -216,6 +217,7 @@ if __name__ == "__main__":
         elif not choice:
             print()
             print('Thank You!!!')
+            print()
             break
         else:
             print('Enter a valid choice')
