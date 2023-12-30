@@ -108,7 +108,7 @@ class Student:
     def display_course_summary(self):
         file_path = "Course Summary"
 
-        headers = ["Course", "Credits", "Component", "Weightage", "Cutoffs", "Grading Summary"]
+        headers = ["Component", "Weightage", "Cutoffs", "Grading Summary"]
         data = []
 
         for i in range(len(self.calculator.weights)):
@@ -116,21 +116,30 @@ class Student:
             cutoff = self.calculator.policy[i]
             grade = chr(ord('A') + i)
             grade_count = self.dict_count[grade]
-            data.append([course_name, credits, weight_name, f"{weight_value}%", cutoff, f"{grade} = {grade_count}"])
+            data.append([weight_name, f"{weight_value}%", cutoff, f"{grade} = {grade_count}"])
 
+        # Add a row for "F" grade
         f_grade_count = self.dict_count["F"]
+        data.append(["", "", "", f"F = {f_grade_count}"])
+
+        # Add a row for total components
+        total_components_row = ["", "", "", ""]
+        data.append(total_components_row)
+
         total_weight = sum(weight for _, weight in self.calculator.weights)
         total_students = sum(self.dict_count.values())
-        data.append(["", "", "", "", "", f"F = {f_grade_count}"])
-        data.append(["", "", "", "", "", ""])
-        data.append(["Total", "", "", f"{total_weight}%", "", f"{total_students}"])
 
+        # Add a row for the final summary
+        total_row = ["Total", f"{total_weight}%", "", f"{total_students}"]
+        data.append(total_row)
+
+        # Write to file
         with open(file_path, 'w') as f:
+            f.write(f"Course: {course_name}\n")
+            f.write(f"Credits: {credits}\n\n")
             f.write(tabulate(data, headers=headers, tablefmt="grid"))
 
-        print()
         print(f"Course Summary written to '{file_path}'.")
-        print()
         logging.info(f"Course Summary written to '{file_path}'.")
 
     def show_grades(self):
@@ -161,11 +170,11 @@ class Student:
             with open("Student's Grade Record.txt", "w") as f:
                 f.write(f"Student ID: {roll_no}\n\n")
                 f.write(tabulate(individual_marks, headers="firstrow", tablefmt="grid"))
-                f.write(f'\n\nThe Grade: {self.grades[roll_no]}\n')
-                f.write(f'The Percentage: {self.percentages[roll_no]}\n')
+                f.write(f'\n\nGrade: {self.grades[roll_no]}\n')
+                f.write(f'Percentage: {self.percentages[roll_no]}\n')
                 logging.info(f"Student with Roll No. {roll_no} found.")
                 print()
-                print(f"Student's Grade Record written to '{f}'.")
+                print(f"Student's Grade Record written to '{f.name}'.")
                 print()
         else:
             print('Student with that Roll No not found')
