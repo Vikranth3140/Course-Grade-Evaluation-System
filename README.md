@@ -19,7 +19,7 @@ Welcome to the Course Grade Evaluation System in Python! This system allows you 
 
     - Change Directory to the system:
     ```bash
-    cd course-grade-evaluation-system
+    cd Course-Grade-Evaluation-System
     ```
     
     - Install the required dependencies:
