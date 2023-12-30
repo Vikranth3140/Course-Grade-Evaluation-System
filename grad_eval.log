@@ -221,3 +221,137 @@
 2023-12-30 05:33:02,092 - INFO: Calculating grades.
 2023-12-30 05:33:02,092 - INFO: Calculating grade counts.
 2023-12-30 05:33:10,960 - INFO: Searching for student with Roll No.: 2022001
+2023-12-30 05:46:28,868 - INFO: Calculating statistics.
+2023-12-30 05:46:28,868 - INFO: Reading students' data.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022001.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022002.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022003.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022004.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022005.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022006.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022007.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022008.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022009.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022010.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022011.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022012.
+2023-12-30 05:46:28,869 - INFO: Succesfully read data for Roll No. 2022013.
+2023-12-30 05:46:28,870 - INFO: Succesfully read data for Roll No. 2022014.
+2023-12-30 05:46:28,870 - INFO: Succesfully read data for Roll No. 2022015.
+2023-12-30 05:46:28,870 - INFO: Succesfully read data for Roll No. 2022016.
+2023-12-30 05:46:28,870 - INFO: Succesfully read data for Roll No. 2022017.
+2023-12-30 05:46:28,870 - INFO: Succesfully read data for Roll No. 2022018.
+2023-12-30 05:46:28,870 - INFO: Succesfully read data for Roll No. 2022019.
+2023-12-30 05:46:28,870 - INFO: Succesfully read data for Roll No. 2022020.
+2023-12-30 05:46:28,870 - INFO: Calculating percentages.
+2023-12-30 05:46:28,870 - INFO: Percentages calculated.
+2023-12-30 05:46:28,870 - INFO: Updating policy.
+2023-12-30 05:46:28,870 - INFO: Policy updated.
+2023-12-30 05:46:28,870 - INFO: Calculating grades.
+2023-12-30 05:46:28,870 - INFO: Grades calculated.
+2023-12-30 05:46:28,870 - INFO: Calculating grade counts.
+2023-12-30 05:46:28,870 - INFO: Grade counts calculated.
+2023-12-30 05:46:28,870 - INFO: Statistics calculated.
+2023-12-30 05:46:31,540 - INFO: Course Summary written to 'Course Summary'.
+2023-12-30 05:46:41,358 - INFO: Students' Grade Summary written to 'Students' Grade Summary.txt'.
+2023-12-30 05:47:24,012 - INFO: Searching for student with Roll No.: 2022001
+2023-12-30 05:47:24,014 - INFO: Student with Roll No. 2022001 found.
+2023-12-30 05:50:38,343 - INFO: Calculating statistics.
+2023-12-30 05:50:38,343 - INFO: Reading students' data.
+2023-12-30 05:50:38,343 - INFO: Succesfully read data for Roll No. 2022001.
+2023-12-30 05:50:38,343 - INFO: Succesfully read data for Roll No. 2022002.
+2023-12-30 05:50:38,343 - INFO: Succesfully read data for Roll No. 2022003.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022004.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022005.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022006.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022007.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022008.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022009.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022010.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022011.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022012.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022013.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022014.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022015.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022016.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022017.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022018.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022019.
+2023-12-30 05:50:38,344 - INFO: Succesfully read data for Roll No. 2022020.
+2023-12-30 05:50:38,344 - INFO: Calculating percentages.
+2023-12-30 05:50:38,344 - INFO: Percentages calculated.
+2023-12-30 05:50:38,344 - INFO: Updating policy.
+2023-12-30 05:50:38,345 - INFO: Policy updated.
+2023-12-30 05:50:38,345 - INFO: Calculating grades.
+2023-12-30 05:50:38,345 - INFO: Grades calculated.
+2023-12-30 05:50:38,345 - INFO: Calculating grade counts.
+2023-12-30 05:50:38,345 - INFO: Grade counts calculated.
+2023-12-30 05:50:38,345 - INFO: Statistics calculated.
+2023-12-30 05:50:42,653 - INFO: Searching for student with Roll No.: 2022001
+2023-12-30 05:50:42,655 - INFO: Student with Roll No. 2022001 found.
+2023-12-30 05:51:42,835 - INFO: Calculating statistics.
+2023-12-30 05:51:42,835 - INFO: Reading students' data.
+2023-12-30 05:51:42,835 - INFO: Succesfully read data for Roll No. 2022001.
+2023-12-30 05:51:42,835 - INFO: Succesfully read data for Roll No. 2022002.
+2023-12-30 05:51:42,835 - INFO: Succesfully read data for Roll No. 2022003.
+2023-12-30 05:51:42,835 - INFO: Succesfully read data for Roll No. 2022004.
+2023-12-30 05:51:42,835 - INFO: Succesfully read data for Roll No. 2022005.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022006.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022007.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022008.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022009.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022010.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022011.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022012.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022013.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022014.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022015.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022016.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022017.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022018.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022019.
+2023-12-30 05:51:42,836 - INFO: Succesfully read data for Roll No. 2022020.
+2023-12-30 05:51:42,836 - INFO: Calculating percentages.
+2023-12-30 05:51:42,836 - INFO: Percentages calculated.
+2023-12-30 05:51:42,836 - INFO: Updating policy.
+2023-12-30 05:51:42,836 - INFO: Policy updated.
+2023-12-30 05:51:42,836 - INFO: Calculating grades.
+2023-12-30 05:51:42,836 - INFO: Grades calculated.
+2023-12-30 05:51:42,836 - INFO: Calculating grade counts.
+2023-12-30 05:51:42,837 - INFO: Grade counts calculated.
+2023-12-30 05:51:42,837 - INFO: Statistics calculated.
+2023-12-30 05:51:47,823 - INFO: Searching for student with Roll No.: 2022001
+2023-12-30 05:51:47,825 - INFO: Student with Roll No. 2022001 found.
+2023-12-30 05:53:13,593 - INFO: Calculating statistics.
+2023-12-30 05:53:13,593 - INFO: Reading students' data.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022001.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022002.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022003.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022004.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022005.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022006.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022007.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022008.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022009.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022010.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022011.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022012.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022013.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022014.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022015.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022016.
+2023-12-30 05:53:13,594 - INFO: Succesfully read data for Roll No. 2022017.
+2023-12-30 05:53:13,595 - INFO: Succesfully read data for Roll No. 2022018.
+2023-12-30 05:53:13,595 - INFO: Succesfully read data for Roll No. 2022019.
+2023-12-30 05:53:13,595 - INFO: Succesfully read data for Roll No. 2022020.
+2023-12-30 05:53:13,595 - INFO: Calculating percentages.
+2023-12-30 05:53:13,595 - INFO: Percentages calculated.
+2023-12-30 05:53:13,595 - INFO: Updating policy.
+2023-12-30 05:53:13,595 - INFO: Policy updated.
+2023-12-30 05:53:13,595 - INFO: Calculating grades.
+2023-12-30 05:53:13,595 - INFO: Grades calculated.
+2023-12-30 05:53:13,595 - INFO: Calculating grade counts.
+2023-12-30 05:53:13,595 - INFO: Grade counts calculated.
+2023-12-30 05:53:13,595 - INFO: Statistics calculated.
+2023-12-30 05:53:17,726 - INFO: Searching for student with Roll No.: 2022005
+2023-12-30 05:53:17,727 - INFO: Student with Roll No. 2022005 found.
